@@ -1,0 +1,135 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+
+
+#pieces-count {
+    color: #e74c3c;
+}
+
+#reset-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#reset-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Grid Layout para o tabuleiro */
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+    gap: 3px;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: #34495e;
+    border-radius: 15px;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos das células */
+.celula {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Células vazias (fora do tabuleiro) */
+.celula.vazia {
+    background: transparent;
+    cursor: default;
+}
+
+/* Peças */
+.celula.peca {
+    background: radial-gradient(circle at 30% 30%, #f39c12, #e67e22);
+    border: 2px solid #d35400;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.celula.peca:hover {
+    transform: scale(1.1);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Buracos (espaços vazios válidos) */
+.celula.buraco {
+    background: radial-gradient(circle, #2c3e50, #34495e);
+    border: 2px solid #1a252f;
+    box-shadow: 
+        inset 0 3px 6px rgba(0, 0, 0, 0.5),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.celula.buraco:hover {
+    background: radial-gradient(circle, #3a526b, #4a637a);
+    transform: scale(1.05);
+}
+
+/* Estados especiais */
+.celula.selecionada {
+    border: 3px solid #e74c3c !important;
+    box-shadow: 
+        0 0 15px rgba(231, 76, 60, 0.6),
+        0 6px 12px rgba(0, 0, 0, 0.4);
+    animation: pulse 1s infinite;
+}
+
+.celula.movimento-valido {
+    border: 3px solid #27ae60 !important;
+    box-shadow: 
+        0 0 15px rgba(39, 174, 96, 0.6),
+        inset 0 3px 6px rgba(0, 0, 0, 0.5);
+    animation: glow 1s infinite alternate;
+}
+
+
+
