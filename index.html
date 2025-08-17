@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Resta Um</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo Resta Um</h1>
+        
+        <div class="game-info">
+            <p>Peças restantes: <span id="pieces-count">32</span></p>
+            <button id="reset-button">Reiniciar Jogo</button>
+        </div>
+
+        <div class="board" id="board">
+            
+            <div class="cell empty" data-row="0" data-col="0"></div>
+            <div class="cell empty" data-row="0" data-col="1"></div>
+            <div class="cell piece" data-row="0" data-col="2"></div>
+            <div class="cell piece" data-row="0" data-col="3"></div>
+            <div class="cell piece" data-row="0" data-col="4"></div>
+            <div class="cell empty" data-row="0" data-col="5"></div>
+            <div class="cell empty" data-row="0" data-col="6"></div>
+
+            
+            <div class="cell empty" data-row="1" data-col="0"></div>
+            <div class="cell empty" data-row="1" data-col="1"></div>
+            <div class="cell piece" data-row="1" data-col="2"></div>
+            <div class="cell piece" data-row="1" data-col="3"></div>
+            <div class="cell piece" data-row="1" data-col="4"></div>
+            <div class="cell empty" data-row="1" data-col="5"></div>
+            <div class="cell empty" data-row="1" data-col="6"></div>
+
+            
+            <div class="cell piece" data-row="2" data-col="0"></div>
+            <div class="cell piece" data-row="2" data-col="1"></div>
+            <div class="cell piece" data-row="2" data-col="2"></div>
+            <div class="cell piece" data-row="2" data-col="3"></div>
+            <div class="cell piece" data-row="2" data-col="4"></div>
+            <div class="cell piece" data-row="2" data-col="5"></div>
+            <div class="cell piece" data-row="2" data-col="6"></div>
+
+            <!--  centro sem peça -->
+            <div class="cell piece" data-row="3" data-col="0"></div>
+            <div class="cell piece" data-row="3" data-col="1"></div>
+            <div class="cell piece" data-row="3" data-col="2"></div>
+            <div class="cell hole" data-row="3" data-col="3"></div>
+            <div class="cell piece" data-row="3" data-col="4"></div>
+            <div class="cell piece" data-row="3" data-col="5"></div>
+            <div class="cell piece" data-row="3" data-col="6"></div>
+
+            
+            <div class="cell piece" data-row="4" data-col="0"></div>
+            <div class="cell piece" data-row="4" data-col="1"></div>
+            <div class="cell piece" data-row="4" data-col="2"></div>
+            <div class="cell piece" data-row="4" data-col="3"></div>
+            <div class="cell piece" data-row="4" data-col="4"></div>
+            <div class="cell piece" data-row="4" data-col="5"></div>
+            <div class="cell piece" data-row="4" data-col="6"></div>
+
+            
+            <div class="cell empty" data-row="5" data-col="0"></div>
+            <div class="cell empty" data-row="5" data-col="1"></div>
+            <div class="cell piece" data-row="5" data-col="2"></div>
+            <div class="cell piece" data-row="5" data-col="3"></div>
+            <div class="cell piece" data-row="5" data-col="4"></div>
+            <div class="cell empty" data-row="5" data-col="5"></div>
+            <div class="cell empty" data-row="5" data-col="6"></div>
+
+            
+            <div class="cell empty" data-row="6" data-col="0"></div>
+            <div class="cell empty" data-row="6" data-col="1"></div>
+            <div class="cell piece" data-row="6" data-col="2"></div>
+            <div class="cell piece" data-row="6" data-col="3"></div>
+            <div class="cell piece" data-row="6" data-col="4"></div>
+            <div class="cell empty" data-row="6" data-col="5"></div>
+            <div class="cell empty" data-row="6" data-col="6"></div>
+        </div>
+
+        
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
